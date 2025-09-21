@@ -1,0 +1,64 @@
+@use "colors" as *;
+
+// Global Styles
+* {
+    color: $color-text;
+    font-size: 1.2rem;
+}
+
+// Container
+.container {
+    background-color: $color-background;
+    border: 1px solid #000;
+    display: flex;
+    height: 500px;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 1em;
+    width: 50%;
+}
+
+// Left Section
+.left {
+    background-color: $color-primary;
+    height: 100%;
+    width: 69%;
+    position: relative;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+// Right Section
+.right {
+    background-color: $color-secondary;
+    height: 100%;
+    width: 29%;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .button {
+        background-color: $color-button;
+        color: $color-primary;
+        border: 0;
+        border-radius: 10px;
+        cursor: pointer;
+        width: 7em;
+        height: 2.5em;
+        font-size: 1rem;
+        font-weight: bold;
+        padding: 0.5em 2em;
+
+        // Center button in the lower part of .right
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
